@@ -64,16 +64,15 @@ nav {
 
 .welcome-overlay {
     position: absolute;
-    top: 20%;
-    right: 20%;
-    left: 20%;
-    bottom: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .welcome-overlay img {
-    width: 20%;
-    height: 40%;
-    border: 10ch #b4d4f6;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #7d7d7d;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -131,7 +130,6 @@ nav {
 .history {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    padding: 20px;
     text-align: left;
 }
 

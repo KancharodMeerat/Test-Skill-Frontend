@@ -28,6 +28,10 @@ body {
 }
 
 .blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     background: #fff;
     margin-bottom: 20px;
     padding: 15px;
@@ -60,9 +64,8 @@ body {
 .blog-footer {
     text-align: center;
     width: 100%;
-    max-width: 800px;
     padding: 10px;
-    background-color: #eae072;
+    background-color: #e8c05d;
     color: #fff;
     border-radius: 8px;
 }
