@@ -157,7 +157,32 @@ nav {
     justify-content: center;
     position: relative;
     margin: auto 20%;
+    animation: activty-jumping 1s 1s 3;
 
+}
+
+.activty-1 {
+    animation: activty-jumping 1s 0s 3;
+}
+.activty-2 {
+    animation: activty-jumping 1s 1s 3;
+}
+.activty-3 {
+    animation: activty-jumping 1s 2s 3;
+}
+
+@keyframes activty-jumping {
+    0% {
+        transform: translateY(0%);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translateY(-100%);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .activty img,.activty video {
@@ -370,7 +395,7 @@ table th {
     width: 20%;
     height: 40%;
     border: 10ch #007BFF;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 footer {
@@ -379,8 +404,4 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
 }
