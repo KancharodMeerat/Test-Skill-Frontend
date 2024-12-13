@@ -1,42 +1,50 @@
+/* *{
+    border: 1px solid red;
+} */
 body {
     margin: 0;
     font-family: "Exo 2", sans-serif;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     color: #333;
+    animation-name: body-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    overflow-x: hidden;
+}
+
+@keyframes body-animation {
+0%   {background-color: #dadaf3;}
+25%  {background-color: #e4e4f4;}
+50%  {background-color: #cdcdf6;}
+100% {background-color: #dcdcf9;}
+}
+
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
 }
 
 .blog-header {
     text-align: center;
-    width: 100%;
-    max-width: 800px;
     padding: 20px;
     background-color: #87a0d1;
     color: #fff;
     border-radius: 8px;
-    margin-bottom: 20px;
 }
 
 .blog-content {
-    max-width: 800px;
-    width: 100%;
     padding: 0 15px;
 }
 
-.blog-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.blog-post { 
+    max-width: 500px; 
     background: #fff;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; 
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .blog-post h2 {
@@ -47,25 +55,46 @@ body {
 
 .blog-post img,
 .blog-post video {
-    width: 20%;
-    border-radius: 8px;
-    margin: 10px 300px;
-    display: flex;
-    justify-content: center;
-    
+    width: 200px;
+    height: 200px;
+    border: 2px solid #e25c44;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
 }
 
 .blog-post p {
     font-size: 1em;
-    margin: 10px 0 0;
+    margin: 10px 10px;
     text-align: justify;
 }
 
 .blog-footer {
     text-align: center;
-    width: 100%;
     padding: 10px;
     background-color: #e8c05d;
     color: #fff;
     border-radius: 8px;
 }
+
+.dog-run-mix{
+    width: 100%;
+    height: 40px;
+}
+
+.dog-run img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.dog-run {
+    animation: run 5s infinite alternate;
+    position: absolute;
+}
+
+@keyframes run {        
+    from { left: 0px; }            
+    to { left: calc(100% - 50px); }
+  }
